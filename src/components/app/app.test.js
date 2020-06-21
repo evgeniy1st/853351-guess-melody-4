@@ -7,6 +7,7 @@ it(`App render`, () => {
     .create(<App
       errorsCount={3}
       gameTime={5}
+      onWelcomeButtonClick={() => {}}
     />)
     .toJSON();
 
