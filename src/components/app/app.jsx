@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import WelcomeScreen from "../welcome-screen/welcome-screen.jsx";
 
 const App = (props) => {
-  const {errorsCount, gameTime} = props;
+  const {errorsCount, gameTime, onWelcomeButtonClick} = props;
 
   return (
     <WelcomeScreen
       errorsCount={errorsCount}
       timeCount={gameTime}
+      onWelcomeButtonClick={onWelcomeButtonClick}
     />
   );
 };
@@ -16,6 +17,7 @@ const App = (props) => {
 App.propTypes = {
   errorsCount: PropTypes.number.isRequired,
   gameTime: PropTypes.number.isRequired,
+  onWelcomeButtonClick: PropTypes.func.isRequired,
 };
 
 export default App;
